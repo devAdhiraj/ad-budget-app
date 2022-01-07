@@ -24,6 +24,7 @@ const handler = async (
         return res.status(403).json({result: "unauthorized"})
       }
     } catch(err){
+      console.log(err)
       return res.status(403).json({result:"unauthorized"})
     }
 }

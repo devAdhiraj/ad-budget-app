@@ -38,7 +38,7 @@ const List = () => {
     const updateItem = (descript:string, date:string, amount:number, type:string, id:string) => {
         ctx.edit(id, {
             id:id,
-          date: Math.floor(new Date(date).getTime()),
+          date: new Date(date).getTime() + 1000 * 300 * 60 + 1000,
           description: descript,
           amt: type === "income" ? Math.abs(amount) : -1*Math.abs(amount)
         })

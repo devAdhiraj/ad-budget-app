@@ -19,6 +19,7 @@ const refreshJwt = async (req:NextApiRequest, res:NextApiResponse) => {
         })
         return decoded_token;
     } catch(err){
+        console.log(err)
         return "unauthorized"
     }
     

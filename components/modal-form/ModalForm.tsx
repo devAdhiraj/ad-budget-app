@@ -22,7 +22,7 @@ const ModalForm = ({onConfirm, onCancel, show, payload}:any) => {
             month = '0' + month;
         if (day.length < 2) 
             day = '0' + day;
-    
+        console.log([year, month, day].join('-'))
         return [year, month, day].join('-');
     }
      
@@ -82,11 +82,11 @@ const ModalForm = ({onConfirm, onCancel, show, payload}:any) => {
           onCancel()
         }} > Cancel</Button>
         <Button variant="primary" onClick={() => {
-          setDate("")
-          setDescript("")
-          setType("")
-          setAmount("")
-         onConfirm(descript, date, amount, type, payload?.id)}}>Save</Button>
+         onConfirm(descript, date, amount, type, payload?.id)
+         setDate("")
+         setDescript("")
+         setType("")
+         setAmount("")}}>Save</Button>
       </Modal.Footer>
     </Modal>);
 }

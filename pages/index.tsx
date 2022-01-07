@@ -30,7 +30,6 @@ const Home: NextPage = (props:any) => {
   }
 
   const addItem = (descript:string, date:string, amount:number, type:string, id?:any) => {
-    console.log(id)
     dataCtx.add({
       id: "null",
       date: Math.floor(new Date(date).getTime()),
@@ -65,7 +64,6 @@ export const getServerSideProps = async ({req}: NextPageContext) => {
     if(req && req.headers && req.headers.cookie){ 
       const email = await verifyAuth(req.headers.cookie)
       if(!verifyAuth){
-        console.log("verify auth failed...should redirect")
         return {
           redirect:{
             destination: "/login",
@@ -99,7 +97,10 @@ export const getServerSideProps = async ({req}: NextPageContext) => {
       return {
         redirect:{
           destination: "/login",
-          permanent:false
+          permanent:false,
+          headers: [
+            {type: "redirect"}
+          ]
         }
       }
     }
@@ -107,7 +108,10 @@ export const getServerSideProps = async ({req}: NextPageContext) => {
     return {
       redirect:{
         destination: "/login",
-        permanent:false
+        permanent:false,
+        headers: [
+          {type: "redirect"}
+        ]
       }
     }
   }

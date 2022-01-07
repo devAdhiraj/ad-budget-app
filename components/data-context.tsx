@@ -51,7 +51,6 @@ export const DataContextProvider = ({children} :any) => {
                         break;
                     }
                 }
-                console.log(i)
                 let newEntries = [...entries]
                 newEntries.splice(i, 0, payload)
                 setEntries(newEntries)

@@ -48,14 +48,24 @@ const Login: NextPage = () => {
   )
 }
 
-export const getServerSideProps = async ({req}: NextPageContext) => {
+export const getServerSideProps = async ({req, res}: NextPageContext) => {
   try{
     if(req && req.headers && req.headers.cookie && await verifyAuth(req.headers.cookie)){
-      console.log("redirecting...")
+      if(req.headers.type === "redirect"){
+        res?.setHeader(
+          "Set-Cookie", [
+             `ad-token=deleted; Max-Age=0`,
+          ]
+          );
+          return {props:{}}
+      }
       return {
         redirect: {
           destination: "/",
-          permanent: false
+          permanent: false,
+          headers: [
+            {type: "redirect"}
+          ]
         }
       }
     }

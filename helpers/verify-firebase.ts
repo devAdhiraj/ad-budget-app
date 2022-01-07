@@ -8,8 +8,10 @@ const verifyFirebase = async (req:NextApiRequest) => {
         return false
     }
     const decoded_token = await getAuth().verifyIdToken(firebase_token);
+    console.log(decoded_token)
     return decoded_token
     } catch(err){
+        console.log(err)
         return false
     }
 }

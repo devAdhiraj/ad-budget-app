@@ -26,7 +26,6 @@ const handler = async (
     const {uid} = decoded_token;
     const db = getDatabase();
     const ref = db.ref("users/");
-    console.log(req.query)
     const entryRef = ref.child(`${uid}/entries/${req.query.id}`);
     if(req.method === "PUT"){
       if(!req.body.amt || !req.body.date){

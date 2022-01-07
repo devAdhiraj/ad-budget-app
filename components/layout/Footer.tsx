@@ -43,7 +43,7 @@ const Footer = () => {
       </ul>
       <span className={styles.navitem}>
         <a className={styles.navlink} rel="noopener noreferrer"
-            target="_blank" href="https://github.com/devAdhiraj/sensor-dash-frontend">
+            target="_blank" href="https://github.com/devAdhiraj/ad-budget-app">
           Source Code
         </a>
       </span>
