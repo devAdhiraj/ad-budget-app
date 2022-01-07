@@ -24,6 +24,7 @@ const handler = async (
     return res.status(200).json({result: "success"})
 
   } catch(err){
+    console.log(err)
     return res.status(500).json({result: `Error logging out`});
   }
 }

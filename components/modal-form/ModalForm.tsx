@@ -32,7 +32,7 @@ const ModalForm = ({onConfirm, onCancel, show, payload}:any) => {
         setAmount(payload?.amt ? Math.abs(payload.amt) : "")
         setType(payload?.amt < 0 ? "expense" : "income");
       }
-    }, [show])
+    }, [show, payload])
 
     return (
     <Modal
