@@ -114,3 +114,25 @@
     flex-direction: column;
   }
 }
+
+.addBtn {
+  position: fixed;
+  top: calc(98vh - 70px);
+  left: calc(98vw - 100px);
+  margin: 10px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 335px) {
+  .addBtn {
+      left: 75vw;
+      top: 96vh;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .addBtn {
+      left:69vw;
+      top: 100vh;
+  }
+}

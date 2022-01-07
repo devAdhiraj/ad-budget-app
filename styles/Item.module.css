@@ -1,0 +1,50 @@
+.container {
+    width: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 10px 15px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+}
+
+.income {
+    color: #49d49a;
+}
+
+.btnWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+  
+  .delBtn {
+    border-radius: 40%;
+    padding:1px 11px 1px 11px;
+    font-size:27px;
+    line-height: 95%;
+    margin-left: 10px;
+  }
+
+.title {
+  flex: 1;
+}
+
+.amt {
+  align-items: flex-end;
+}
+
+.expense {
+    color: var(--bs-red);
+}
+
+@media only screen and (max-width: 700px) {
+    .delBtn {
+        padding:1px 8px 1px 8px;
+        font-size:22px;
+        line-height: 95%;
+        margin-left: 5px;
+      }}

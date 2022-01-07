@@ -1,0 +1,21 @@
+.container {
+    padding: 0 2rem;
+  }
+  
+.main {
+min-height: 100vh;
+padding: 4rem 0;
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.card {
+    background:#222222;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    color:#ececec
+}
