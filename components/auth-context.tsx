@@ -23,7 +23,7 @@ export const AuthContextProvider = ({children} :any) => {
     const [user, setUser] = useState<string | User | null>("pending");
     const router = useRouter()
     const provider = new GoogleAuthProvider();
-    provider.addScope("https://www.googleapis.com/auth/spreadsheets");
+    // provider.addScope("https://www.googleapis.com/auth/spreadsheets");
     useEffect(() => {
         auth.onAuthStateChanged((res_user) => {
             setUser(res_user)
