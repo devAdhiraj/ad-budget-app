@@ -25,6 +25,8 @@ const handler = async (
         console.log(private_key)
         console.log(process.env.CLIENT_ID)
         console.log(process.env.AUTH_URI)
+        console.log(process.env.CLIENT_CERT_URL)
+        
         return res.status(403).json({result: "unauthorized"})
       }
     } catch(err){
