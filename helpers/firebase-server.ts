@@ -1,7 +1,6 @@
 const admin = require("firebase-admin");
 // const serviceAccount = require("C:/Users/adhir/Documents/coding/budget-app-56f7b-firebase-adminsdk-kzsv7-eca696ae7f.json")
 const private_key = process.env.PRIVATE_KEY?.replace(/\\n/g, '\n');
-console.log("start....")
 const serviceAccount = {
   "type": "service_account",
   "project_id": process.env.NEXT_PUBLIC_PROJECT_ID,
@@ -14,7 +13,6 @@ const serviceAccount = {
   "auth_provider_x509_cert_url": process.env.AUTH_PROVIDER,
   "client_x509_cert_url": process.env.CLIENT_CERT_URL
 }
-console.log(serviceAccount)
 const FirebaseServer = () => {
   !admin.apps.length ? admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),

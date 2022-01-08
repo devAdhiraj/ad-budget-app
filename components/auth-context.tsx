@@ -53,7 +53,6 @@ export const AuthContextProvider = ({children} :any) => {
           await fetch("/api/logout", {
             method: "POST"
           })
-          console.log("should logout")
           router.replace('/login')
           
         }catch(err){
