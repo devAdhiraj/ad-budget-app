@@ -1,6 +1,7 @@
 const admin = require("firebase-admin");
 // const serviceAccount = require("C:/Users/adhir/Documents/coding/budget-app-56f7b-firebase-adminsdk-kzsv7-eca696ae7f.json")
 const private_key = process.env.PRIVATE_KEY?.replace(/\\n/g, '\n');
+console.log("start....")
 const serviceAccount = {
   "type": "service_account",
   "project_id": process.env.NEXT_PUBLIC_PROJECT_ID,

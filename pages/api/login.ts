@@ -20,16 +20,11 @@ const handler = async (
     }
     try{
       FirebaseServer()
+      console.log("testing...")
       if(await refreshJwt(req, res) !== "unauthorized"){
         return res.status(200).json({result: "success"})
       }
       else{
-        const private_key = process.env.PRIVATE_KEY?.replace(/\\n/g, '\n');
-        console.log(private_key)
-        console.log(process.env.CLIENT_ID)
-        console.log(process.env.AUTH_URI)
-        console.log(process.env.CLIENT_CERT_URL)
-
         return res.status(403).json({result: "unauthorized"})
       }
     } catch(err){

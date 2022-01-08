@@ -17,7 +17,7 @@ const handler = async (
     const cookies = new Cookies(req, res)
     cookies.set("ad_token", "token", {
       httpOnly:true,
-      secure: process.env.NODE_ENV === "production" ? true : false,
+      secure: false,
       expires: new Date(0),
       overwrite: true
     })
