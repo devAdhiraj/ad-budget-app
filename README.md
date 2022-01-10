@@ -1,34 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AD Budgeting App
 
-## Getting Started
+A web app built using [NextJS](https://nextjs.org/) and [React](https://reactjs.org/) that employs Server-Side Rendering (SSR) along with Firebase authentication and Realtime-database.
 
-First, run the development server:
+The web app uses firebase to authenticate users with Google Sign-In. Once authenticated, the user can add entries to track their income/expenses.
+All users and their transactions are stored in a Firebase Realtime Database.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+To effectively use SSR, the auth state needed to be determined at backend. However, firebase auth state is only available on client side. To get around this issue, the NextJS backend includes custom APIs to login which use Firebase admin SDK to login from the backend. The custom login API also returns a JWT which is stored in an HTTP Only cookie. The JWT can then be used to determine auth state at backend. The JWT is refreshed at each request.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The frontend is a responsive, dark-theme web app styled with Bootstrap and CSS modules.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+![image](https://user-images.githubusercontent.com/75645547/148712232-63a6cb19-e5a0-4543-892f-157a2b03af54.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
