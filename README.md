@@ -9,5 +9,5 @@ To effectively use SSR, the auth state needed to be determined at backend. Howev
 
 The frontend is a responsive, dark-theme web app styled with Bootstrap and CSS modules.
 
-![image](https://user-images.githubusercontent.com/75645547/148712232-63a6cb19-e5a0-4543-892f-157a2b03af54.png | width=500)
+<img src="https://user-images.githubusercontent.com/75645547/148712232-63a6cb19-e5a0-4543-892f-157a2b03af54.png" width="300">
 
