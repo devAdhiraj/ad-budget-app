@@ -2,6 +2,8 @@
 
 A web app built using [NextJS](https://nextjs.org/) and [React](https://reactjs.org/) that employs Server-Side Rendering (SSR) along with Firebase authentication and Realtime-database.
 
+Hosted at: [https://ad-budget-app.vercel.app](https://ad-budget-app.vercel.app)
+
 The web app uses firebase to authenticate users with Google Sign-In. Once authenticated, the user can add entries to track their income/expenses.
 All users and their transactions are stored in a Firebase Realtime Database.
 
